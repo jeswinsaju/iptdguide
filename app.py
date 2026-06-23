@@ -7,6 +7,17 @@ st.set_page_config(
     page_icon="🧠",
     layout="centered"
 )
+st.markdown(
+    """
+    <link rel="manifest" href="/manifest.json">
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js');
+      }
+    </script>
+    """,
+    unsafe_allow_html=True
+)
 
 st.title("🧠 Bender-Gestalt Guide")
 st.caption("Digitized Reference Manual — Part I: Arrangement")
